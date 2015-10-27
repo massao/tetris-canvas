@@ -13,8 +13,6 @@ function Game() {
 	var loop = function() {
 		game.loop(this.ctx);
 	}
-	var audio = document.querySelector('audio');
-	audio.volume = .5;
 
 	game.start = function() {
 		game = this;
@@ -26,30 +24,6 @@ function Game() {
 		game.paused = false;
 		game.bindKeys();
 		game.t = setInterval(loop, 500);
-	}
-	game.audio = function(e) {
-		var audio = document.querySelector('audio');
-		switch(e.keyCode) {
-			case 77:
-			if(!audio.paused){
-				audio.pause();
-			} else {
-				audio.play();
-			}
-			break;
-			case 109:
-			case 189:
-			if(audio.volume > .2) {
-				audio.volume -= .1;
-			}
-			break;
-			case 107:
-			case 187:
-			if(audio.volume < 1) {
-				audio.volume += .1
-			}
-			break;
-		}
 	}
 	game.binds = function(e) {
 		var p = pieces[pieces.length-1];
@@ -122,7 +96,6 @@ function Game() {
 		document.addEventListener('keydown',game.binds, false);
 		document.addEventListener('keyup',game.pause, false)
 	}
-	document.addEventListener('keyup', game.audio, false);
 }
 Game.prototype = {
 	draw: function(ctx) {

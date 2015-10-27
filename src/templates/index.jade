@@ -10,17 +10,16 @@ html(lang="pt-br")
 		.container
 			.page-header
 				h1 Tetris
-			#controls
-				h2 Controls
-				li Arrow keys = Move blocks
-				li P = Pause game
-				li M = Toggle music
-				li -/+ = Music Volume
-			#wrapper-game
-				canvas#game(width=250 height=500)
-				p.score Score:
-					span 0
-				audio#audio(loop)
-					source(src="assets/audio/Tetris.mp3" type="audio/mpeg")
-					source(src="assets/audio/Tetris.ogg" type="audio/ogg")
-		script(src="assets/js-min/game.js" type="text/javascript")
+			.content
+				.controls
+					h2 Controls
+					br
+					li #[strong Up]: Rotate block
+					li #[strong Left/Right]: Move block
+					li #[strong Down]: Drop block
+					li #[strong P]: Pause game
+				.wrapper-game
+					canvas#game(width=250 height=500)
+					p.score Score:
+						span 0
+		script(src="assets/js/game.js" type="text/javascript")

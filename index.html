@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tetris</title>
+    <link href="assets/css/global.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>Tetris</h1>
+      </div>
+      <div class="content">
+        <div class="controls">
+          <h2>Controls</h2><br>
+          <li><strong>Up</strong>: Rotate block</li>
+          <li><strong>Left/Right</strong>: Move block</li>
+          <li><strong>Down</strong>: Drop block</li>
+          <li><strong>P</strong>: Pause game</li>
+        </div>
+        <div class="wrapper-game">
+          <canvas id="game" width="250" height="500"></canvas>
+          <p class="score">Score:<span>0</span></p>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/game.js" type="text/javascript"></script>
+  </body>
+</html>

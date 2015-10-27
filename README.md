@@ -6,13 +6,12 @@ Tetris game made with canvas
 Prerequisites
 ------------
 Nodejs and NPM  
-Grunt  
-Bower
+Gulp  
 
 Running
 -------
-1. Run "npm install" and "bower install".
-2. Run "grunt compile"
+1. Run "npm install"
+2. Run "gulp"
 3. Open the index.html
 
 [Github page](http://renatomassao.github.io/tetris-canvas/)
